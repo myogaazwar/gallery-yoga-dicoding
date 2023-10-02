@@ -1,0 +1,341 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "DM Serif Display", serif;
+  margin: 0;
+  background-color: white;
+}
+
+header {
+  display: inline;
+}
+
+#name-jumbotron {
+  transition: color 1s ease;
+}
+
+.jumbotron {
+  padding: 60px;
+  background-image: url(../img/header/jumbotron-image.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: white;
+  text-shadow: 4px 2px 0px rgba(0, 0, 0, 0.6);
+  font-size: 1.2rem;
+}
+
+nav {
+  background-color: #0197b8;
+  padding: 5px 4rem;
+  top: 0;
+  position: sticky;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  flex-wrap: wrap;
+  /* padding-inline: 4rem; */
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav a {
+  color: white;
+  padding: 0.5rem 1.2rem;
+  text-decoration: none;
+  font-size: 22px;
+  border-radius: 999px;
+}
+
+nav a:hover {
+  color: black;
+  background-color: white;
+  transition: all 0.5 ease-in;
+}
+/* End Nav */
+
+main {
+  padding: 30px 80px;
+  display: flex;
+  /* flex-direction: row; */
+  gap: 5rem;
+  width: 100%;
+
+  /* flex: 1; */
+}
+
+#content {
+  /* flex: 3; */
+  flex-basis: 75%;
+}
+
+article {
+  scroll-margin-top: 6rem;
+}
+
+article > h2 {
+  font-size: 1.8rem;
+}
+
+.card {
+  /* padding-bottom: 50px; */
+  box-shadow: 1px 0px 5px 4px rgba(0, 0, 0, 0.66);
+
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
+.card > h2 {
+  text-align: center;
+  /* margin: 0; */
+  padding: 30px;
+  margin: -30px;
+  margin-bottom: 20px;
+  width: 100%;
+  color: white;
+  background-color: #0197b8;
+  box-shadow: 0px 6px 0px black;
+
+  box-sizing: content-box;
+}
+
+aside .card h2 {
+  text-align: center;
+  color: #0197b8;
+}
+
+.card p {
+  font-size: 1.4rem;
+  text-align: justify;
+}
+
+.hobby-list {
+  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  padding: 8px;
+}
+
+.hobby-list img {
+  /* display: block; */
+  max-width: 350px;
+  box-shadow: 5px 6px 6px 3px rgba(0, 0, 0, 0.62);
+}
+
+.hobby-img > h3 {
+  font-size: 25px;
+  flex: 1 1;
+}
+
+.content-galeri {
+  display: flex;
+  text-align: center;
+  padding: 10px;
+  margin: 0 50px;
+  border: 3px solid black;
+
+  gap: 10px;
+
+  flex-direction: row;
+}
+
+.content-galeri:not(:last-child) {
+  margin-bottom: 50px;
+}
+
+.content-galeri img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.content-galeri .desc-galeri {
+  align-self: center;
+  width: 50%;
+
+  padding: 20px;
+}
+
+.desc-galeri h3 {
+  font-style: italic;
+  font-weight: 800;
+}
+
+.qoute-galeri {
+  padding: 50px;
+}
+
+.qoute-galeri blockquote {
+  font-size: 1.5rem;
+  text-align: justify;
+  margin: 0;
+}
+
+/* Aside */
+aside {
+  /* flex: 1; */
+  flex-basis: 25%;
+  max-width: 500px;
+  /* min-width: 372px; */
+}
+
+.profile {
+  padding: 50px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.profile img {
+  max-width: 227px;
+  /* min-width: 140px; */
+  border: 2px solid black;
+  box-shadow: 19px 10px 3px -1px rgba(0, 0, 0, 0.26);
+}
+
+table {
+  width: 100%;
+}
+
+/* End Aside */
+
+/* Footer */
+footer {
+  padding: 30px;
+  background-color: #0197b8;
+}
+
+footer h2 {
+  text-align: center;
+  color: white;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer a:active {
+  color: white;
+}
+
+footer a:visited {
+  color: inherit;
+}
+/* End Footer */
+
+.top-arrow {
+  color: #0197b8;
+  position: fixed;
+  bottom: 24px;
+  right: 30px;
+  background-color: white;
+
+  width: 64px;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 999px;
+  box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1280px) {
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Mobile Screen */
+@media screen and (max-width: 960px) {
+  .content-galeri {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .content-galeri img,
+  .content-galeri .desc-galeri {
+    width: 100%;
+  }
+
+  main {
+    padding: 6%;
+  }
+
+  .content-galeri .qoute-galeri {
+    padding: 5%;
+  }
+
+  nav {
+    padding: 5px 6%;
+  }
+
+  nav ul {
+    /* overflow-x: scroll;
+    overflow-y: visible; */
+    justify-content: center;
+    gap: 6%;
+  }
+
+  aside {
+    min-width: none;
+  }
+}
+
+@media screen and (max-width: 569px) {
+  .card {
+    padding: 9px;
+  }
+
+  .card > h2 {
+    padding: 9px;
+    margin: -9px;
+  }
+
+  .hobby-list {
+    padding-top: 6%;
+  }
+
+  .content-galeri {
+    margin-top: 8%;
+  }
+
+  article {
+    scroll-margin-top: 9rem;
+  }
+
+  nav ul {
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 413px) {
+  .card {
+    padding: 2px;
+  }
+
+  .card > p {
+    padding: 5px;
+    font-size: 1rem;
+  }
+
+  .card > h2 {
+    padding: 2px;
+    margin: -2px;
+  }
+}
